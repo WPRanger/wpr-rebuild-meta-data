@@ -1,0 +1,21 @@
+/* Rebuild Meta Table Styles */
+
+.wpr-table {
+    margin: 10px 0 0 10px;
+}
+.wpr-table th {
+    text-align: left;
+    background-color: #ddd;
+}
+.wpr-table tr:nth-child(odd) {
+  background-color: #ddd;
+}
+.wpr-table td,
+.wpr-table th {
+    padding: 5px;
+}
+.wpr-table tr:last-child {
+  background-color: eee;
+  font-weight: bold;
+}
+
