@@ -3,7 +3,7 @@
 Plugin Name: WPR Rebuild Meta Data
 Plugin URI: http://wpranger.co.uk/plugins/wpr-rebuild-meta-data/
 Description: Rebuilds the meta data for WordPress Media Library images
-Version: 0.1
+Version: 0.2
 Author: Dave Naylor
 Author URI: http://wpranger.co.uk
 License: GPL2
