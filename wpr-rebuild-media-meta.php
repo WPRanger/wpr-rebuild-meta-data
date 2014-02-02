@@ -16,7 +16,7 @@ GitHub Branch: master
 add_action('admin_init', 'rebuild_meta_init' );
 add_action('admin_menu', 'rebuild_meta_admin_menu');
 
-function wp_permissions_init(){
+function rebuild_meta_init(){
     register_setting( 'rebuild_meta', 'rebuild_meta', 'intval' );
 }
 add_action( 'admin_init', 'rebuild_meta_init' );
