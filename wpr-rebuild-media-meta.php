@@ -19,7 +19,6 @@ add_action('admin_menu', 'rebuild_meta_admin_menu');
 function rebuild_meta_init(){
     register_setting( 'rebuild_meta', 'rebuild_meta', 'intval' );
 }
-add_action( 'admin_init', 'rebuild_meta_init' );
 
 function rebuild_meta_admin_menu() {
 add_management_page( 'Rebuild Meta', 'Rebuild Meta', 'manage_options', 'rebuild-meta', 'rebuild_meta_options_page' ); 
