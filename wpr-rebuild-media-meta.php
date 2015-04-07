@@ -3,7 +3,7 @@
 Plugin Name: WPR Rebuild Meta Data
 Plugin URI: http://wpranger.co.uk/plugins/wpr-rebuild-meta-data/
 Description: Rebuilds the meta data for WordPress Media Library images
-Version: 0.2
+Version: 0.2.1
 Author: Dave Naylor
 Author URI: http://wpranger.co.uk
 License: GPL2
@@ -49,8 +49,8 @@ function rebuild_meta_options_page() {
         $meta = wp_get_attachment_metadata($id);
         if ($meta) {
             $file = get_attached_file($id);
-            echo "<td><strong>Rebuilding:</strong></td><td>$file</td>";
-            if (!empty($file)) {
+            if( !empty($file) && file_exists( $file) ){
+                echo "<td><strong>Rebuilding:</strong></td><td>$file</td>";
                 $info = getimagesize($file);
                 $meta = array (
                     'width' => $info[0],
@@ -61,6 +61,8 @@ function rebuild_meta_options_page() {
                     'image_meta' => array(),    // EXIF data
                 );
                 update_post_meta($id, '_wp_attachment_metadata', $meta);
+            }else{
+              echo "<td><strong>File does not exist.</strong></td><td>$file</td>";
             }
         }
     echo "</tr>";
